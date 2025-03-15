@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5. İlan Detayı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+         /* Genel Kutucuk Stili */
+        .box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            margin-left: 70px; /* Sağa kaymayı engelleme */
+            margin-right: 10px; /* Sağda da boşluk verildi */
+            max-width: 100%; /* Kutuların taşmaması için maksimum genişlik %100 yapıldı */
+        }
+
+        /* Başlık ve Çerçeve Stili */
+        .box-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: left;
+
+        }
+        .address-line {
+            border-bottom: 3px solid #ffe8a1; 
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Fiyat Kutusu */
+        .price {
+            background-color: #ffe8a1;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-left: 80px;
+        }
+
+        /* İlan Bilgileri Alt Çizgi */
+        .info-box p {
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Görseller */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Küçük Resimler */
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .thumbnail-container img {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Açıklama Kutusu */
+        .description-box {
+            border: 1px solid #ddd;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Stili */
+        .navbar {
+            height: 80px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-left: 90px;
+            margin-right: 90px;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                margin-left: 10px;
+                margin-right: 10px;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 576px) {
+            .box {
+                margin-left: 10px;
+                margin-right: 10px;
+                max-width: 100%;
+            }
+        }
+
+        .sagbox {
+            margin-right: 90px;
+            max-width: 100%; /* Sağ kutu için genişliği %100 yapma */
+        }
+
+        @media (max-width: 768px) {
+            .sagbox {
+                margin-right: 10px;
+                max-width: 100%; /* Sağ kutu için genişliği %100 yapma */
+            }
+        }
+        @media (max-width: 576px) {
+            .sagbox {
+                margin-right: 10px;
+                max-width: 100%; /* Sağ kutu için genişliği %100 yapma */
+            }
+        }
+
+        .Açıklamayazısı {
+            padding-bottom: 5px;
+            border-bottom: 3px solid #ffe8a1;
+        }
+
+        /* Siyah Çizgi */
+        .custom-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-left: 65px solid black;
+            border-right: 65px solid black;
+            min-height: 110vh;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .custom-border {
+                border-left: 30px solid black;
+                border-right: 30px solid black;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-border {
+                border-left: 15px solid black;
+                border-right: 15px solid black;
+            }
+        }
+
+        .dropdown-item:hover {
+            color: inherit  !important;
+        }
+
+        /* Yatay Kaymayı Engelleme */
+        .container-custom {
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+        }
+
+
+                /* Bottom Bar stilini ayarlayın */
+        .bottom-bar {
+            background-color: #000000; /* Yeşil renk veya istediğiniz bir renk */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .bottom-bar-text {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+        <div class="container-fluid">
+            <img src="img/logo.jpg" width="70" class="d-inline-block align-text-top" style="margin-right: 30px;"> 
+            <a class="navbar-brand" href="main.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Kurumsal
+                        </a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-light" href="#">Hakkımızda</a></li>
+                            <li><a class="dropdown-item text-light" href="#">Misyonumuz</a></li>
+                            <li><a class="dropdown-item text-light" href="#">Vizyonumuz</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Satılık İlanlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kiralık İlanlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletişim.html">İletişim</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-success">Üye ol</button>
+                    <button type="button" class="btn btn-warning">Giriş yap</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Siyah Çizgi -->
+    <div class="custom-border"></div>
+
+    <!-- İlan Detayları -->
+    <div class="container-custom my-5">
+        <div class="row">
+            <!-- Sol Sütun -->
+            <div class="col-lg-8 col-md-12">
+                <div class="box">
+                    <h2 class="box-title">Davutlar Mevkinde Villa</h2>
+                    <p class="address-line"><i class="bi bi-geo-alt"></i> Postane, Tuzla, İstanbul</p>
+                    <div class="d-flex justify-content-center align-items-center ">
+                    <img src="img/r5.jpg" class="img-fluid mb-3 " alt="Ana Resim" style="max-width: 70%;" >
+                </div>
+                    <div class="thumbnail-container mb-3">
+                        <img src="img/2.jpg" class="img-thumbnail" alt="Küçük Resim 1">
+                        <img src="img/2.jpg" class="img-thumbnail" alt="Küçük Resim 2">
+                        <img src="img/2.jpg" class="img-thumbnail" alt="Küçük Resim 3">
+                    </div>
+                </div>
+
+                <!-- Açıklama -->
+                <div class="box">
+                    <h5 class=" Açıklamayazısı">Açıklama</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                </div>
+            </div>
+
+            <!-- Sağ Sütun -->
+            <div class="col-lg-4 col-md-12">
+              <div class=" sagbox">
+                <div class="price mb-2">550.000.000 TL</div>
+	                <div class="box info1-box">
+	                    <h5 class="box-title address-line">Satıcı Bilgileri</h5>
+	                    <p><strong>Adı:</strong> Kaan Polat</p>
+	                    <p><strong>Telefon:</strong> 0555 000 000 00</p>
+	                    <p><strong>E-Mail:</strong> info@emlakilanlari.com</p>
+	                </div>
+	                <div class="box info-box">
+	                    <h5 class="box-title address-line">İlan Bilgileri</h5>
+                        <p><strong>İlan No:</strong> <span class="text-warning" style="float: right;">#22346</span></p>
+                        <p><strong>İşlem Durumu:</strong> <span style="float: right;">Kiralık</span></p>
+                        <p><strong>Kullanım Alanı:</strong> <span style="float: right;">250 m²</span></p>
+                        <p><strong>İlan Tipi:</strong> <span style="float: right;">Konut</span></p>
+                        <p><strong>Emlak Tipi:</strong> <span style="float: right;">Villa</span></p>
+                        <p><strong>Oda Sayısı:</strong> <span style="float: right;">7+1</span></p>
+                        <p><strong>Banyo Sayısı:</strong> <span style="float: right;">3</span></p>
+                        <p><strong>Isıtma Tipi:</strong> <span style="float: right;">Kombi (Doğalgaz)</span></p>
+                        <p><strong>Balkon Sayısı:</strong> <span style="float: right;">3</span></p>
+                        <p><strong>Krediye Uygun:</strong> <span style="float: right;">Evet</span></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Bottom Bar -->
+<div class="bottom-bar">
+    <p class="bottom-bar-text">Tüm Hakları Saklıdır  &copy; 2024  emlakilanlari.com</p>
+</div>
+
+</body>
+</html>

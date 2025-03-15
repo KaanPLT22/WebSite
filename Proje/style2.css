@@ -1,0 +1,39 @@
+        .price {
+            background-color: #ffe8a1;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        .sidebar {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .property-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+.custom-border {
+
+    border-left: 65px solid black;  /* Sol kenara çizgi */
+    border-right: 65px solid black; /* Sağ kenara çizgi */
+    min-height: 230vh; /* Sayfa yüksekliği kadar çizgi */
+}
+.custom-navbar {
+    height: 80px; /* Navbar'ı aşağı kaydırır */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+
+
+}
+/* Navbar'ın sol ve sağ kenarlarına margin ekleyerek boşluk bırakma */
+.navbar {
+    margin-left: 15px; /* Sol boşluk */
+    margin-right: 15px; /* Sağ boşluk */
+}
+.dropdown-item:hover {
+    color: inherit  !important; /* Hover sırasında daha açık bir renk */
+  }

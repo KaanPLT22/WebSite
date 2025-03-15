@@ -1,0 +1,179 @@
+
+.custom-border {
+
+    border-left: 65px solid black;  /* Sol kenara çizgi */
+    border-right: 65px solid black; /* Sağ kenara çizgi */
+    min-height: 230vh; /* Sayfa yüksekliği kadar çizgi */
+}
+.custom-navbar {
+    height: 80px; /* Navbar'ı aşağı kaydırır */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+
+
+}
+
+
+/* Navbar'ın sol ve sağ kenarlarına margin ekleyerek boşluk bırakma */
+.navbar {
+    margin-left: 15px; /* Sol boşluk */
+    margin-right: 15px; /* Sağ boşluk */
+}
+
+.btn-custom {
+    min-width: 30px; /* Düğme için minimum genişlik */
+    white-space: nowrap; /* Yazının tek satırda kalmasını zorlar */
+    margin-left: 10px;
+}
+/* Navbar'ın altındaki resmin ayarlanması */
+.resim  {
+    
+    max-width: 100%; /* Navbar'ın genişliğini aşmaz */
+    height: auto; /* Yüksekliği orantılı olarak ayarlar */
+    object-fit: cover; /* Resmi kesmeden sığdırır */
+    margin: 0 15px;
+}
+
+
+.dropdown-item:hover {
+    color: inherit  !important; /* Hover sırasında daha açık bir renk */
+  }
+
+.property-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+.containerbox {
+    display: flex;
+    flex-direction: column; /* Div'leri dikey sıraya diz */
+    gap: 20px; /* Her bir div arasında 10px boşluk */
+    margin-left: 15px;
+}
+
+.box {
+    width: 300px; /* Kutu genişliği */
+    background-color: #ffffff; /* Beyaz arka plan */
+    border: 1px solid #ccc; /* İnce kenarlık */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    overflow: hidden; /* Taşan içeriği gizle */
+}
+
+/* Başlık Stili */
+.box-header {
+    background-color: #3F8317; /* Yeşil başlık */
+    color: #ffffff; /* Beyaz yazı */
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box-list {
+    list-style: none; /* Nokta veya sayı kaldır */
+    margin: 0;
+    padding: 0;
+
+}
+
+.box-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Alt çizgi */
+}
+
+.box-list li:last-child {
+    border-bottom: none; /* Son elemanda alt çizgi yok */
+}
+
+
+
+
+    .property-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .price {
+      color: #f0a500; /* Sarı */
+      font-weight: bold;
+    }
+    .id {
+      color: #28a745; /* Yeşil */
+      font-weight: bold;
+    }
+
+.custom-line {
+    margin-top: 25px; /* Daha fazla aşağı kaydırmak için değeri artırabilirsiniz */
+}
+
+.btn-vitrin {
+
+    width: 1300px;
+
+    margin-left: 330px;
+
+}
+
+.Sonyazi {
+
+    display: flex;
+    margin-left: 30px   ;
+    gap: 550px;
+}
+
+.yazi {
+    max-width: 500px; /* Maksimum genişlik */
+    word-wrap: break-word; /* Uzun kelimeleri kır */
+    overflow-wrap: break-word; /* Tarayıcı uyumluluğu için ek */
+    margin-left:  15px;
+}
+
+.Enson {
+    display: flex;
+    gap: 710px;
+
+}
+
+.menü {
+    width: 450px; /* Kutu genişliği */
+    background-color: #ffffff; /* Beyaz arka plan */
+    border: 1px solid #ccc; /* İnce kenarlık */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    overflow: hidden; /* Taşan içeriği gizle */
+    margin-left: 660px;
+    margin-top: -200px;
+}
+
+/* Başlık Stili */
+.yazirenk .list-group-item {
+    color: green; /* Yazı rengini yeşil yapar */
+    font-weight: bold; /* İsteğe bağlı olarak yazıyı kalın yapabilirsiniz */
+}
+
+
+
+
+
+/* Bottom Bar stilini ayarlayın */
+.bottom-bar {
+    background-color: #000000; /* Yeşil renk veya istediğiniz bir renk */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-bar-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.emlakilan {
+
+    margin-left: 40px;
+}

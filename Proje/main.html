@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Css Örnek</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="custom-border">
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar ">
+			<div class="container-fluid">
+				<img src="img/logo.jpg" width="70" class="d-inline-block align-text-top" style="margin-right: 30px;"> 
+				<a class="navbar-brand" href="#">Anasayfa</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Kurumsal
+							</a>
+							<ul class="dropdown-menu bg-dark">
+								<li><a class="dropdown-item text-light" href="#">Hakkımızda</a></li>
+								<li><a class="dropdown-item text-light" href="#">Misyonumuz</a></li>
+								<li><a class="dropdown-item text-light" href="#">Vizyonumuz</a></li>
+							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Satılık İlanlar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Kiralık İlanlar</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link" href="#">Projeler</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link" href="iletişim.html">İletişim</a>
+						</li>
+						</div>
+							<div class="d-flex gap-1">
+							<button type="button" class="btn btn-success btn-custom">Üye ol</button>
+							<button type="button" class="btn btn-warning btn-custom ">Giriş yap</button>
+						</div>
+						
+					</ul>
+
+
+		</nav>
+					<div class="resim">
+			    			<img src="img/2.jpg"   class="img-fluid">
+					</div>
+			<div class="d-flex justify-content-center align-items-center">
+   			<h3  class=" mb-4"> İlan arama</h3>
+   			</div>
+
+
+
+<div class="container " style="margin-right: 60px;">
+    <!-- Başlıklar -->
+    <div class="Seçim mb-">
+        <ul class="d-flex list-unstyled gap-4">
+            <li class="col-md-3 text-start">İlan no veya kelime</li>
+            <li class="col-md-3 text-start">Kategori seçiniz</li>
+            <li class="col-md-3 text-start">Alt Kategori seçiniz</li>
+        </ul>
+    </div>
+    
+    <!-- Input, Select Alanları ve Buton -->
+    <div class="d-flex align-items-center gap-4">
+        <!-- Input Field -->
+        <div class="col-md-3">
+            <input type="text" class="form-control ilan-no" placeholder="İlan no veya kelime">
+        </div>
+        
+        <!-- Select Field 1 -->
+        <div class="col-md-3">
+            <select class="form-select">
+                <option selected>---Kategori Seçiniz---</option>
+                <option value="1">Konut</option>
+                <option value="2">İş yeri</option>
+                <option value="3">Arsa</option>
+            </select>
+        </div>
+        
+        <!-- Select Field 2 -->
+        <div class="col-md-3">
+            <select class="form-select">
+                <option selected>---Alt Kategori Seçiniz---</option>
+                <option value="1">Satılık</option>
+                <option value="2">Kiralık</option>
+                
+            </select>
+        </div>
+        
+        <!-- Search Button -->
+        <div>
+            <button class="btn btn-success ms-4" style="background-color: #3F8317; " >İlan Ara</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <!-- Custom Line -->
+<hr class="custom-linee">
+
+	<div class="d-flex justify-content-center align-items-center">
+	    <h3 class="text-center">Vitrin İlanları</h3>
+	</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sol Tarafta Kategoriler (Sol yapıştırılmış) -->
+        <div class="col-md-3" style="padding-left: 0;"> <!-- padding-left: 0; ile sol boşluğu sıfırlıyoruz -->
+            
+            <!-- Kategoriler -->
+            <div class="box">
+                <div class="box-header">Kategoriler</div>
+                <ul class="box-list">
+                    <li>Konut İlanları</li>
+                    <li>İş Yeri İlanları</li>
+                    <li>Arsa İlanları</li>
+                </ul>
+            </div>
+
+            <!-- Boşluk Ekleme -->
+            <div class="my-3"></div>
+
+            <!-- Şehirler Başlığı (Yeşil Arka Plan) -->
+            <div class="box">
+                <div class="box-header" style="background-color: #3F8317; color: white; padding: 10px;">Şehirler</div>
+                <ul class="box-list">
+                    <li>İstanbul</li>
+                    <li>Ankara</li>
+                    <li>İzmir</li>
+                    <li>Bursa</li>
+                    <li>Adana</li>
+                </ul>
+            </div>
+
+            <!-- Boşluk Ekleme -->
+            <div class="my-3"></div>
+
+            <!-- Alt Kategoriler -->
+            <div class="box">
+                <div class="box-header">Alt Kategoriler</div>
+                <ul class="box-list">
+                    <li>Satılık İlanlar</li>
+                    <li>Kiralık İlanlar</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+        <!-- Sağ Tarafta Vitrin İlanları -->
+        <div class="col-md-9">
+            <div class="row">
+                <!-- Üst Satırdaki 3 Vitrin İlanı -->
+                <div class="col-md-4">
+                    <div class="card property-card">
+                        <a href="sekme.html"> <!-- Resim için bağlantı -->
+                            <img src="img/r1.jpg" alt="Property Image" class="property-image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Sıfır İkiz Villalar</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">3.500.000 TL</span>
+                                <span class="id">#615456</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card property-card">
+                        <a href="sekme2.html"> <!-- Resim için bağlantı -->
+                            <img src="img/r2.jpg" alt="Property Image" class="property-image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">İhtiyaçtan Acil Satılık</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">5.250.000 TL</span>
+                                <span class="id">#123456</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card property-card">
+                        <a href="sekme3.html"> <!-- Resim için bağlantı -->
+                            <img src="img/r3.jpg" alt="Property Image" class="property-image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Site İçinde Villa</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">20.000.000 TL</span>
+                                <span class="id">#43125</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="row mt-4">
+                        <!-- Alt Satırdaki 3 Vitrin İlanı -->
+                        <div class="col-md-4">
+                            <div class="card property-card">
+                                <a href="sekme4.html"> <!-- Resim için bağlantı -->
+                                    <img src="img/r4.jpg" alt="Property Image" class="property-image">
+                                </a>                
+                                <div class="card-body">
+                                    <h5 class="card-title">Havuzlu ve Bahçeli Daire</h5>
+                                    <p class="card-text">Some quick example text to build on the card title.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price">10.999.999 TL</span>
+                                        <span class="id">#72451</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="col-md-4">
+                    <div class="card property-card">
+                                <a href="sekme5.html"> <!-- Resim için bağlantı -->
+                                    <img src="img/r5.jpg" alt="Property Image" class="property-image">
+                                </a>      
+                        <div class="card-body">
+                            <h5 class="card-title">Davutlar Mevkinde Villa</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">550.000.000 TL</span>
+                                <span class="id">#22346</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card property-card">
+                                 <a href="sekme6.html"> <!-- Resim için bağlantı -->
+                                    <img src="img/r6.jpg" alt="Property Image" class="property-image">
+                                </a>      
+                        <div class="card-body">
+                            <h5 class="card-title">Denize Sıfır Arsa</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">130.000.000 TL</span>
+                                <span class="id">#31251</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tüm İlanlar Butonu (En Alt) -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <button class="btn" style="background-color: #3F8317; color: white; width: 100%; padding: 8px;">
+                        Tüm İlanlar İçin Tıklayın
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr class="custom-line" >
+
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Hakkımızda ve Lorem Ipsum - Sol Kısım -->
+        <div class="col-md-4">
+            <h3>Hakkımızda</h3>
+            <img src="img/logo2.jpg" width="200" class="img-fluid mt-3" alt="Resim">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At laborum inventore qui, magnam temporibus iste molestias quos quidem voluptas nulla blanditiis numquam sit illum ex. Dignissimos qui, nemo nisi pariatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- Menü - Ortada ve hizalı -->
+        <div class="col-md-4">
+            <h3 class="text-start">Menü</h3>
+            <ul class="list-group text-start">
+                    <div class="yazirenk">
+                        <li class="list-group-item">Konut İlanları</li>
+                        <li class="list-group-item">İş Yeri İlanları</li>
+                        <li class="list-group-item">Arsa İlanları</li>
+                        <li class="list-group-item">Satılık İlanlar</li>
+                        <li class="list-group-item">Kiralık İlanlar</li>
+                        </div>
+            </ul>
+        </div>
+
+        <!-- İletişim ve Emlak İlanları - Sağ Kısım, sola hizalanmış -->
+        <div class="col-md-4" >
+             <div class="emlakilan">
+                <h3 class="text-start">İletişim <br> Emlak İlanları</h3>
+                <p class="text-start"><span class="fw-bold">Adres:</span> Sümer Mh. 1265 Sk. No:1 Tuzla/İstanbul</p>
+                <p class="text-start"><span class="fw-bold">Tel:</span> 0216 555 55 55</p>
+                <p class="text-start"><span class="fw-bold">E-Mail:</span> info@emlakilanlari.com</p>
+              </div>
+        </div>
+    </div>
+</div>
+    
+    
+
+
+
+
+
+
+<!-- Bottom Bar -->
+<div class="bottom-bar">
+    <p class="bottom-bar-text">Tüm Hakları Saklıdır  &copy; 2024  emlakilanlari.com</p>
+</div>
+
+
+
+</body>
+</html>
+
